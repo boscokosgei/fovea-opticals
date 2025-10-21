@@ -5,8 +5,8 @@ export const sampleOpticians: Optician[] = [
   {
     id: '1',
     name: 'Dr. Elias Kibet',
-    specialty: 'Pediatric Optometry',
-    bio: 'With over 10 years of experience in pediatric eye care, Dr. Johnson specializes in children\'s vision development and myopia control.',
+    specialty: 'Contact Lenses',
+    bio: 'With over 10 years of experience in diagnosing and management of eye care, Dr. Elias specializes in fitting contact lenses and managing complex corneal conditions.',
     imageUrl: '/images/opticians/dr-sarah.jpg',
     experience: 10,
   },

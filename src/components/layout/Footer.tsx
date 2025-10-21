@@ -23,9 +23,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>📞 (555) 123-4567</li>
-              <li>✉️ hello@foveaopticals.com</li>
-              <li>📍 123 Vision Street, Eye City</li>
+              <li>📞 (+254) 702-116-349</li>
+              <li>✉️ elias@foveaopticals.com</li>
+              <li>📍 Oginga Odinga Street, Eldoret City</li>
+              <li> Sirgoi Plaza, Opposite jumahaji</li>
             </ul>
           </div>
         </div>
