@@ -20,7 +20,10 @@ export default function Header() {
             <Link href="/opticians" className="text-gray-600 hover:text-blue-600 transition duration-300">
               Our Opticians
             </Link>
-            <Link href="/appointments" className="text-gray-600 hover:text-blue-600 transition duration-300">
+            <Link 
+              href="/appointments" 
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+            >
               Book Appointment
             </Link>
           </nav>
