@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Optician {
+  id        String   @id @default(cuid())
+  name      String
+  specialty String
+  bio       String
+  imageUrl  String?
+  experience Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  appointments Appointment[]
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  duration    Int      // in minutes
+  price       Float
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  appointments Appointment[]
+}
+
+model Appointment {
+  id             String   @id @default(cuid())
+  patientName    String
+  patientEmail   String
+  patientPhone   String
+  appointmentDate DateTime
+  serviceId      String
+  opticianId     String
+  status         String   @default("scheduled") // scheduled, confirmed, completed, cancelled
+  notes          String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  service  Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  optician Optician @relation(fields: [opticianId], references: [id], onDelete: Cascade)
+
+  @@index([appointmentDate])
+  @@index([patientEmail])
+}
